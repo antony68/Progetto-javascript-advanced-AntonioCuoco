@@ -134,6 +134,7 @@ a{color: #fffffe}
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -226,4 +227,43 @@ align-items: center;
 
 }
 
+.form-one {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
+
+.btn-search {
+
+  width: 30%;
+  margin-top: 15px;
+  padding: 10px 15px;
+
+}
+
+.gridLibri {
+
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  
+  }
+
+  .container {
+
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+
+  }
+
+  }
+

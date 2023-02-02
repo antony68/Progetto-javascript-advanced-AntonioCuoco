@@ -2,9 +2,12 @@ let searchInput = document.getElementById("searchInput");
 let btnSend = document.getElementById("btn-searchID");
 let divOne = document.getElementById("gridLibri");
 
-function display() {
-    btnSend.onclick = function() {
-        let searchValue = searchInput.value;
+function keyPressEvent(e) {
+    let searchValue = searchInput.value;
+
+   searchInput.onkeydown = function(e) {
+        let key = e.key;
+        if(key == "Enter") {
         fetch('https://openlibrary.org/subjects/'+searchValue.toLowerCase()+ '.json')
        .then(response => response.json())
        .then(function (response) {
@@ -54,8 +57,8 @@ function display() {
        .catch(function (error) {
         alert("errore prova a scrivere fantasy o love nella casella di ricerca");    
       })
-      
-      }
-      
-}
-export default display
+        }
+    }
+    }
+
+export default keyPressEvent
